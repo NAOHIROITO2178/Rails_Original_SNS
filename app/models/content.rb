@@ -6,5 +6,6 @@ class Content < ApplicationRecord
     validates :title
     validates :body
     validates :image
+    validates :video
   end
 end
