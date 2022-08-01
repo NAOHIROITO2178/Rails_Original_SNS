@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2022_06_18_143459) do
     t.string "title"
     t.text "body"
     t.string "image_id"
-    t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
