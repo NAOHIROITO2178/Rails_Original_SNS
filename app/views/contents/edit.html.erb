@@ -29,6 +29,11 @@
           <%= f.attachment_field :image, class: "input" %>
           </div>
 
+          <div class="field">
+          <%= f.label :video, "動画", class: "label" %>
+          <%= f.file_field :video, class: "input" %> 
+          </div>
+
           <%= f.submit '更新', class: "button is-success" %>
         <% end %>
       </div>

@@ -33,6 +33,11 @@
                 <tr>
                 <td><%= simple_format @content.body %></th>
                 </tr>
+                <tr>
+                <% if @content.video.attached? %>
+                <td><video src="<%= content_path(@content.video) %>" type="video/mp4" controls></video></td>
+                <% end %>
+                </tr>
               </table>
               <% if @content.user.id == current_user.id %>
                 <%= link_to "編集", edit_content_path(@content), class: "button is-success" %>

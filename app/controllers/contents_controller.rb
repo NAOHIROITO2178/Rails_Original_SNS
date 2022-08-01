@@ -16,7 +16,7 @@ class ContentsController < ApplicationController
     @content = Content.new(content_params)
     @content.user_id = current_user.id
     if @content.save
-      redirect_to content_path(@content), notice: "レシピを投稿しました。"   
+      redirect_to content_path(@content), notice: "ネタを投稿しました。"   
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ContentsController < ApplicationController
     @content = Content.find(params[:id])
     @content.user_id = current_user.id
     if @content.save
-      redirect_to content_path(@content), notice: "レシピを更新しました。"   
+      redirect_to content_path(@content), notice: "ネタを更新しました。"   
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class ContentsController < ApplicationController
 
   private
   def content_params 
-    params.require(:content).permit(:title, :body, :image)
+    params.require(:content).permit(:title, :body, :image, :video)
   end
 
 end
