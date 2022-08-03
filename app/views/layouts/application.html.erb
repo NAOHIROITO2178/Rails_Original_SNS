@@ -37,24 +37,25 @@
 
     <% if user_signed_in? %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
-         <div class="navbar-item">
-           <%= link_to "ポートフォリオ一覧", contents_path, class: "button is-warning is-light" %>
-         </div>
-         <div class="navbar-item">
-           <%= link_to "新しいポートフォリオを作る", new_content_path, class: "button is-warning is-light" %>
-         </div>
+          <div class="navbar-item">
+            <%= link_to "ポートフォリオ一覧", contents_path, class: "navbar-item button is-warning is-light" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "新しいポートフォリオを作る", new_content_path, class: "button is-warning is-light" %>
+          </div>
+
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
-              <p class="control">
-                <%= link_to "Go to TALENTER'S LIST", users_path, class: "button is-warning is-light" %>
-              </p>
-              <p class="control">
-                <%= link_to "マイページへ", user_path(current_user), class: "button is-warning is-light" %>
-              </p>
-              <p class="control">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
-              </p>
+                <p class="control">
+                  <%= link_to "Go to TALENTER'S LIST", users_path, class: " button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "マイページへ", user_path(current_user), class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                </p>
               </div>
             </div>
           </div>
@@ -62,25 +63,26 @@
     <% else %>
     <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
-           <%= link_to "ポートフォリオ一覧", contents_path, class: "navber-item button is-warning is-light" %>
+           <%= link_to "ポートフォリオ一覧", contents_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navber-item">
-            <%= link_to "Go to TALENTER'S LIST", users_path, class: "navber-item button is-warning is-light" %>
+           <%= link_to "Go to TALENTER'S LIST", users_path, class: "navbar-item button is-warning is-light" %>
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+                 <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
-                <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
+                 <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light" %>
                 </p>
               </div>
             </div>
           </div>
         </div>
-         <% end %>
+      <% end %>
+
     </nav>
     <%= yield %>
   </body>
